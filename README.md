@@ -11,6 +11,7 @@ A Chrome extension that automatically closes tabs with matching URL patterns aft
 - Visual countdown banner on tabs scheduled for closing
 - Simple popup interface for quick status overview
 - Detailed options page for configuration
+- Quick "Add Current URL" button to add the current tab's URL as a pattern
 
 ## Default Settings
 
@@ -40,6 +41,14 @@ The extension comes with the following default settings:
 4. Add URL patterns to match (e.g., "facebook.com", "twitter.com")
 5. Enable/disable patterns using the checkboxes
 6. Click "Save Settings" to apply your changes
+
+### Adding the Current Tab's URL
+
+1. Navigate to a page you want to automatically close in the future
+2. Click on the Tab Closer icon in your Chrome toolbar
+3. Click the "Add Current URL" button
+4. Edit the URL pattern if needed (it will be pre-filled with the current tab's domain and path)
+5. Click "Add" to save the pattern
 
 ### How It Works
 

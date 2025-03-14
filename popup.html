@@ -56,6 +56,39 @@
     button:hover {
       background-color: #3367d6;
     }
+    .add-url-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 250px;
+    }
+    .modal-content h3 {
+      margin-top: 0;
+    }
+    .modal-content input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+    .modal-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body>
@@ -74,7 +107,21 @@
   </div>
   
   <div class="buttons">
+    <button id="add-current-url">Add Current URL</button>
     <button id="options-button">Options</button>
+  </div>
+
+  <!-- Modal for adding current URL -->
+  <div id="add-url-modal" class="add-url-modal">
+    <div class="modal-content">
+      <h3>Add URL Pattern</h3>
+      <p>Edit the URL pattern below:</p>
+      <input type="text" id="url-pattern-input" placeholder="Enter URL pattern">
+      <div class="modal-buttons">
+        <button id="cancel-add-url">Cancel</button>
+        <button id="save-url-pattern">Add</button>
+      </div>
+    </div>
   </div>
 
   <script src="settings.js"></script>
