@@ -53,7 +53,3 @@ The extension comes with the following default settings:
 - URL patterns are simple string matches (not regular expressions)
 - A tab will be closed if its URL contains any of the enabled patterns
 - The extension needs the "tabs", "storage", and "scripting" permissions to function properly
-
-## License
-
-MIT 
