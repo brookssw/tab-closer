@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Closer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      padding: 15px;
+    }
+    h1 {
+      font-size: 18px;
+      margin-top: 0;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .status {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+    }
+    .status-enabled {
+      color: green;
+    }
+    .status-disabled {
+      color: #999;
+    }
+    .patterns {
+      margin-bottom: 15px;
+    }
+    .pattern-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .pattern-disabled {
+      color: #999;
+      text-decoration: line-through;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tab Closer</h1>
+  
+  <div class="status">
+    <div id="status-text">Loading status...</div>
+    <div id="timeout-text">Timeout: <span id="timeout-value">10</span> seconds</div>
+  </div>
+  
+  <div class="patterns">
+    <h2>Active Patterns:</h2>
+    <div id="patterns-list">
+      <!-- Pattern items will be added here dynamically -->
+    </div>
+  </div>
+  
+  <div class="buttons">
+    <button id="options-button">Options</button>
+  </div>
+
+  <script src="settings.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html> 

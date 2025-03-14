@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Closer Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="number"] {
+      width: 100px;
+      padding: 5px;
+    }
+    .pattern-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .pattern-row input[type="text"] {
+      flex-grow: 1;
+      padding: 5px;
+      margin-right: 10px;
+    }
+    .pattern-row button {
+      margin-left: 10px;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    .add-pattern {
+      margin-top: 10px;
+    }
+    .save-section {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .status {
+      color: green;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .status.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tab Closer Options</h1>
+  
+  <div class="form-group">
+    <label for="timeout">Close matching tabs after (seconds):</label>
+    <input type="number" id="timeout" min="1" max="3600">
+  </div>
+  
+  <div class="form-group">
+    <label>URL Patterns to Close:</label>
+    <p>Enter URL patterns to match. Any tab with a URL containing these patterns will be closed after the specified timeout.</p>
+    
+    <div id="patterns-container">
+      <!-- Pattern rows will be added here dynamically -->
+    </div>
+    
+    <button class="add-pattern" id="add-pattern">Add New Pattern</button>
+  </div>
+  
+  <div class="save-section">
+    <button id="save">Save Settings</button>
+    <span id="status" class="status">Settings saved!</span>
+  </div>
+
+  <script src="settings.js"></script>
+  <script src="options.js"></script>
+</body>
+</html> 
